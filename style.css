@@ -1,0 +1,24 @@
+body {
+    font-family: 'san-serif';
+    font-size: 2rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    margin-top: 10px;
+}
+
+div {
+    margin: 2rem;
+}
+
+#content {
+    border: 5px dashed;
+}
+
+img {
+    height: 500px;
+    width: 500px;
+}
