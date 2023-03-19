@@ -1,1 +1,2 @@
 # quote-fetcher
+Simple single page quote fetcher application. Fetches quotes from the URL defined in script.js and then every 10 seconds displays a  new random author, quote, and image of the author if the switch block contains the author name. The first fetch directly calls the URL and stores the result in a var **dataCache** that will be used any time the interval stopped and then started again. 
