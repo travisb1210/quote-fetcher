@@ -1,13 +1,35 @@
 body {
-    font-family: 'san-serif';
+    background-color: cyan;
+    font-family: 'Quicksand', sans-serif;
     font-size: 2rem;
-    text-align: center;
     padding: 0;
     margin: 0;
 }
 
 button {
-    margin-top: 10px;
+    background-color: yellow;
+    font-family: 'Quicksand', sans-serif;
+    margin: 10px;
+    padding: 12px;
+    width: 200px;
+    border: 3px solid red;
+    border-radius: 25px;
+}
+
+
+button:hover {
+    font-weight: bold;
+}
+
+button:active {
+    background-color:magenta;
+    border: 0px;
+}
+
+img {
+    margin-right: 0;
+    height: 250px;
+    width: 100%;
 }
 
 div {
@@ -15,10 +37,26 @@ div {
 }
 
 #content {
-    border: 5px dashed;
+    background-color: white;
+    padding: 0px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-img {
-    height: 500px;
-    width: 500px;
+#content div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 }
+
+#button {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
