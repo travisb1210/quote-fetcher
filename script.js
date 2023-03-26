@@ -64,7 +64,7 @@ function stop() {
     document.getElementById("stop").disabled = true
     document.getElementById("quote").hidden = true
     document.getElementById("author").innerHTML = ""
-    document.getElementById("text").innerHTMLa = ""
+    document.getElementById("text").innerHTML = ""
     clearInterval(handle)
     console.log("Interval cleared")
 }
