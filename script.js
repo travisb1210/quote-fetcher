@@ -32,6 +32,10 @@ function getQuote(){
 
 function displayQuote(data, id) {
     dataCache = data
+    if(document.getElementById("stop").disabled) {
+        document.getElementById("stop").disabled = false
+        document.getElementById("start").disabled = true
+    }
     console.log(data[getRandomNumber(id)]);
     if(data[id].author !== null ) {
         document.getElementById("author").innerHTML = data[id].author 
