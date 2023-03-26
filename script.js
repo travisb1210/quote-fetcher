@@ -15,8 +15,7 @@ function getQuote(){
             return response.json();
         })
         .then((data) => {
-            document.getElementById("start").disabled = true
-            document.getElementById("stop").disabled = false
+            disableStartButton();
             displayQuote(data, id)
         })
         .catch(() => {
@@ -26,16 +25,13 @@ function getQuote(){
         })
     }else{
         console.log("dataCache is not null")
+        disableStartButton();
         displayQuote(dataCache, id)
     }
 }
 
 function displayQuote(data, id) {
     dataCache = data
-    if(document.getElementById("stop").disabled) {
-        document.getElementById("stop").disabled = false
-        document.getElementById("start").disabled = true
-    }
     console.log(data[getRandomNumber(id)]);
     if(data[id].author !== null ) {
         document.getElementById("author").innerHTML = data[id].author 
@@ -58,12 +54,17 @@ function displayQuote(data, id) {
     }, interval);
 }
 
+function disableStartButton() {
+    document.getElementById("start").disabled = true
+    document.getElementById("stop").disabled = false
+}
+
 function stop() {
     document.getElementById("start").disabled = false
     document.getElementById("stop").disabled = true
     document.getElementById("quote").hidden = true
     document.getElementById("author").innerHTML = ""
-    document.getElementById("text").innerHTML = ""
+    document.getElementById("text").innerHTMLa = ""
     clearInterval(handle)
     console.log("Interval cleared")
 }
